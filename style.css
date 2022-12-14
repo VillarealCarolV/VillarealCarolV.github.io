@@ -1,0 +1,1014 @@
+/********************************************************
+    Template Name: Material Design Coming Soon Template
+    Created By: TrendyTheme
+    Envato Profile: https://themeforest.net/user/trendytheme
+    Website: http://trendytheme.net
+    Version: 1.0
+    Support: http://trendytheme.net/support
+*********************************************************/
+
+
+
+/*
+====================================
+[ CSS TABLE CONTENT ]
+------------------------------------
+    1.0 - General
+    2.0 - Typography
+    3.0 - Form Style
+    4.0 - Alert Style
+    5.0 - Gobal Classes
+    6.0 - Color Presets
+    7.0 - Hero Unit
+    8.0 - Banner Background
+    9.0 - CountDown Style
+    10.0 - Progress bar
+    11.0 - Footer
+    12.0 - Material CSS Customization
+    13.0 - Preloader
+    14.0 - TT Animate CSS
+-------------------------------------
+[ END CSS TABLE CONTENT ]
+=====================================
+*/
+
+
+
+/* ================= General ==================== */
+
+body{
+    font-family: 'Raleway', sans-serif !important;
+    font-size: 14px;
+    line-height: 29px;
+    font-weight: 500;
+    color: #999;
+    background-color: #fff;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+    -webkit-overflow-scrolling: touch;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+html {
+    font-family: 'Raleway', sans-serif!important;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Link style
+/* ------------------------------ */
+a {
+    color: #ed145b;
+}
+a,
+a > * {
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+a:focus,
+a:hover {
+    color: #03a9f4;
+    outline: none;
+    text-decoration: none;
+}
+
+
+/* Transition elements
+/* ------------------------------ */
+a,
+.navbar a,
+.form-control {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; 
+}
+
+
+/* ================ Typography ================== */
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Raleway', sans-serif!important;
+    font-weight: 400;
+    color: #202020;
+    margin: 0 0 15px;
+}
+
+h1 {
+    font-size: 40px;
+}
+h2 {
+    font-size: 20px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 12px;
+}
+
+p img { 
+    margin: 0; 
+}
+
+p {
+    margin: 0 0 30px;
+    line-height: 30px;
+}
+
+hr {
+    margin: 0;
+}
+
+/* Material Button Style
+/* ------------------------------ */
+.btn {
+    height: 50px;
+    padding: 12px 20px;
+    font-size: 16px;
+    line-height: 26px;
+    border-radius: 2px;
+    background-color: #03a9f4; /*brand primary color*/
+    border: 0;
+}
+
+.btn-lg {
+    padding: 12px 38px;
+}
+
+/*button size in extra small devices*/
+@media screen and (max-width: 767px) {
+    .btn-lg {
+        height: auto;
+        font-size: 14px;
+        padding: 8px 25px;
+    }
+}
+
+.btn:hover{
+    background-color: #03a9f4;
+}
+
+.btn.active, 
+.btn:active {
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+
+
+.btn i.material-icons {
+    font-size: 20px;
+}
+
+.btn.focus, 
+.btn:focus, 
+.btn:hover {
+    color: #fff;
+}
+.btn:focus,
+button:focus {
+    outline: none !important;
+}
+
+
+@media (min-width: 992px) {
+    #contactForm .submit-button {
+        float: right;
+    }
+}
+
+
+
+/* Customize Material Form style 
+/* ------------------------------------ */
+.form-control {
+    border-radius: 0;
+}
+.input-field {
+    margin-top: 45px;
+}
+.input-field label {
+    color: #999;
+    top: 0;
+    left: 0;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    margin: 0;
+}
+.input-field label.active {
+    font-size: 12px;
+}
+
+
+/*
+Default Form Style
+--------------------------------------------*/
+input[type=text], 
+input[type=password], 
+input[type=email], 
+input[type=url], 
+input[type=time], 
+input[type=date], 
+input[type=datetime-local], 
+input[type=tel], 
+input[type=number], 
+input[type=search], 
+textarea.materialize-textarea {
+    border-bottom: 1px solid #9b9b9b;
+    font-size: 14px !important;
+}
+
+input[type=text]:focus:not([readonly]), 
+input[type=password]:focus:not([readonly]), 
+input[type=email]:focus:not([readonly]), 
+input[type=url]:focus:not([readonly]), 
+input[type=time]:focus:not([readonly]), 
+input[type=date]:focus:not([readonly]), 
+input[type=datetime-local]:focus:not([readonly]), 
+input[type=tel]:focus:not([readonly]), 
+input[type=number]:focus:not([readonly]), 
+input[type=search]:focus:not([readonly]), 
+textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #03a9f4;
+    box-shadow: 0 1px 0 0 #03a9f4; 
+}
+
+input[type=text]:focus:not([readonly]) + label, 
+input[type=password]:focus:not([readonly]) + label, 
+input[type=email]:focus:not([readonly]) + label, 
+input[type=url]:focus:not([readonly]) + label, 
+input[type=time]:focus:not([readonly]) + label, 
+input[type=date]:focus:not([readonly]) + label, 
+input[type=datetime-local]:focus:not([readonly]) + label, 
+input[type=tel]:focus:not([readonly]) + label, 
+input[type=number]:focus:not([readonly]) + label, 
+input[type=search]:focus:not([readonly]) + label, 
+textarea.materialize-textarea:focus:not([readonly]) + label {
+    color: #03a9f4 !important; 
+}
+
+
+
+/*
+White Form Style
+------------------------------------------*/
+.white-form input[type=text], 
+.white-form input[type=password], 
+.white-form input[type=email], 
+.white-form input[type=url], 
+.white-form input[type=time], 
+.white-form input[type=date], 
+.white-form input[type=datetime-local], 
+.white-form input[type=tel], 
+.white-form input[type=number], 
+.white-form input[type=search], 
+.white-form textarea.materialize-textarea {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.white-form input[type=text]:focus:not([readonly]), 
+.white-form input[type=password]:focus:not([readonly]), 
+.white-form input[type=email]:focus:not([readonly]), 
+.white-form input[type=url]:focus:not([readonly]), 
+.white-form input[type=time]:focus:not([readonly]), 
+.white-form input[type=date]:focus:not([readonly]), 
+.white-form input[type=datetime-local]:focus:not([readonly]), 
+.white-form input[type=tel]:focus:not([readonly]), 
+.white-form input[type=number]:focus:not([readonly]), 
+.white-form input[type=search]:focus:not([readonly]), 
+.white-form textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #fff;
+    box-shadow: 0 1px 0 0 #fff; 
+}
+
+.white-form .input-field label,
+.white-form input[type=text]:focus:not([readonly]) + label, 
+.white-form input[type=password]:focus:not([readonly]) + label, 
+.white-form input[type=email]:focus:not([readonly]) + label, 
+.white-form input[type=url]:focus:not([readonly]) + label, 
+.white-form input[type=time]:focus:not([readonly]) + label, 
+.white-form input[type=date]:focus:not([readonly]) + label, 
+.white-form input[type=datetime-local]:focus:not([readonly]) + label, 
+.white-form input[type=tel]:focus:not([readonly]) + label, 
+.white-form input[type=number]:focus:not([readonly]) + label, 
+.white-form input[type=search]:focus:not([readonly]) + label, 
+.white-form textarea.materialize-textarea:focus:not([readonly]) + label {
+    color: #fff !important; 
+}
+
+
+/* ================= Alert Style ==================== */
+.alert {
+    padding: 12px 15px;
+    border-radius: 2px !important;
+    -webkit-transition: box-shadow 0.3s;
+    -moz-transition: box-shadow 0.3s;
+    -ms-transition: box-shadow 0.3s;
+    transition: box-shadow 0.3s;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.alert i {
+    font-size: 25px;
+    margin-right: 10px;
+    float: left;
+}
+
+.info-border {
+    /*border-color: #31708f;*/
+    color: #31708f;
+    background-color: #d9edf7;
+}
+
+.success-border {
+    /*border-color: #00c03b;*/
+    color: #00c03b;
+    background-color: #effdda;
+}
+
+.warning-border {
+    /*border-color: #ff9c00;*/
+    color: #ff9c00;
+    background-color: #fff8ca;
+}
+
+.danger-border {
+    /*border-color: #ff0000;*/
+    color: #ff0000;
+    background-color: #fff3f3;
+}
+
+
+
+/* ================= Global Classes ==================== */
+.section-padding {
+    padding: 110px 0;
+}
+
+/*margin top*/
+.mt-10 {
+    margin-top: 10px;
+}
+.mt-15 {
+    margin-top: 15px;
+}
+.mt-20 {
+    margin-top: 20px;
+}
+.mt-30 {
+    margin-top: 30px;
+}
+
+
+/*margin bottom*/
+.mb-10 {
+    margin-bottom: 10px !important;
+}
+.mb-15 {
+    margin-bottom: 15px !important;
+}
+.mb-20 {
+    margin-bottom: 20px !important;
+}
+.mb-30 {
+    margin-bottom: 30px !important;
+}
+.mb-40 {
+    margin-bottom: 40px !important;
+}
+.mb-50 {
+    margin-bottom: 50px !important;
+}
+
+
+
+/*pre defined font-weight classes*/
+.text-light {
+    font-weight: 300 !important;
+}
+.text-medium {
+    font-weight: 500 !important;
+}
+.text-bold {
+    font-weight: 700 !important;
+}
+.text-extrabold {
+    font-weight: 900 !important;
+}
+
+
+
+
+/* ================= Color Presets ==================== */
+.brand-color {
+    color: #03a9f4 !important;
+}
+.brand-bg {
+    background-color: #03a9f4 !important;
+}
+.brand-bg.darken-2 {
+    background-color: #0288d1 !important;
+}
+
+
+
+
+/*Verticle Aligne Middle for equel height*/
+.valign-wrapper {
+    display: table;
+    width: 100%;
+}
+.valign-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+
+/* ================= Hero Unit ==================== */
+.intro-title {
+    font-size: 60px;
+    font-weight: 900;
+}
+.sub-intro {
+    display: block;
+    margin: 0 auto 30px;
+}
+@media (min-width: 768px){
+    .sub-intro {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .intro-title {
+        font-size: 35px;
+    }
+}
+
+
+/*Mouse animate icon*/
+.mouse-icon {
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    border: 2px solid #fff;
+    border-radius: 16px;
+    height: 40px;
+    width: 24px;
+    margin-left: -15px;
+    display: block;
+    z-index: 10;
+}
+
+.mouse-icon .wheel {
+    -webkit-animation-name: drop;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-play-state: running;
+    animation-name: drop;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+.mouse-icon .wheel {
+    position: relative;
+    border-radius: 10px;
+    background: #fff;
+    width: 2px;
+    height: 6px;
+    top: 4px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@-webkit-keyframes drop {
+    0%   { top:5px;  opacity: 0;}
+    30%  { top:10px; opacity: 1;}
+    100% { top:25px; opacity: 0;}
+}
+
+@keyframes drop {
+    0%   { top:5px;  opacity: 0;}
+    30%  { top:10px; opacity: 1;}
+    100% { top:25px; opacity: 0;}
+}
+
+
+
+/* ================= Banner Background ==================== */
+.bg-cover,
+[class*='banner-'] {
+    background-size: cover !important;
+}
+
+@media (min-width: 992px) {
+    .bg-fixed {
+        background-attachment: fixed;
+    }
+}
+
+.banner-1 {
+    background-image: url("assets/img/banner-1.jpg");
+    background-color: #03a9f4; /*fallback color*/
+}
+
+
+
+/* ================= CountDown Style ==================== */
+.comingsoon-wrapper .logo {
+    margin-bottom: 50px;
+}
+.countdown {
+  margin-bottom: 0
+}
+.countdown li {
+  display: inline-block;
+  text-align: center;
+  min-width: 110px;
+}
+.countdown li+li {
+  margin-left: 40px;
+}
+.countdown li p{
+    text-transform: uppercase;
+    margin: 0;
+}
+.countdown li span {
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: 900;
+    color: #03a9f4;
+}
+
+@media screen and (max-width: 650px) {
+    .countdown li+li {
+      margin-left: 10px;
+    }
+}
+
+.comingsoon-contact .input-field {
+    margin-top: 20px;
+}
+
+
+.subscription-success {
+    color: #fff;
+    line-height: 24px;
+    margin-top: 20px;
+}
+
+
+
+/* ================= Progress bar ==================== */
+.progress-section {
+    position: relative;
+}
+.progress-title {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.progress {
+    box-shadow: none;
+    background-color: #eee;
+    height: 5px;
+    overflow: visible;
+    border-radius: 0;
+    margin-bottom: 30px;
+}
+.progress-bar {
+    box-shadow: none;
+    text-align: right;
+}
+
+.progress-bar span {
+    position: absolute;
+    top: -32px;
+    color: #999;
+    font-size: 14px;
+    display: inline-block;
+}
+
+
+/*IE Fixing*/
+.ie11 .progress-bar span,
+.ie10 .progress-bar span,
+.ie9 .progress-bar span {
+  top: -25px;
+  right: 0;
+}
+
+.progress .progress-bar.six-sec-ease-in-out {
+  -webkit-transition: width 2s ease-in-out;
+  -moz-transition: width 2s ease-in-out;
+  -o-transition: width 2s ease-in-out;
+  transition:  width 2s ease-in-out;
+}
+
+
+
+/* ================= Footer ==================== */
+
+.footer p {
+    color: #c9f0ff;
+}
+.copy-text a,
+.footer-intro a {
+    color: #fff;
+}
+.copy-text,
+.copy-text a:hover,
+.footer-intro a:hover {
+    color: #81ddff;
+}
+
+
+.footer hr {
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.footer .footer-logo {
+    margin: 45px 0 35px;
+}
+.footer-intro p {
+    margin: 0 auto 70px;
+}
+
+@media (min-width: 992px) {
+    .footer-intro p {
+        width: 60%;
+    }
+}
+
+/* 
+Social Link
+------------------------------------------------ */
+.social-link {
+    margin-bottom: 0;
+}
+.social-link li {
+    display: inline-block;
+}
+.social-link li+li {
+    margin-left: 15px;
+}
+.social-link li a i {
+    display: block;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    line-height: 40px;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.social-link li a i:hover {
+    color: #03a9f4 ;
+    background: #fff;
+}
+
+
+
+/* ================= Back To Top ==================== */
+.footer .container {
+    position: relative;
+}
+.back-top {
+    position: absolute!important;
+    top: -35px;
+    right: 0;
+}
+.back-top i {
+    font-size: 4rem!important;
+}
+.back-top.white i {
+    color: inherit;
+}
+
+
+
+/* ================= Material CSS Customization ==================== */
+nav {
+    background-color: transparent;
+}
+nav ul,
+nav ul li {
+    float: none;
+}
+nav ul li:hover, 
+nav ul li.active {
+    background-color: transparent;
+}
+nav ul a {
+    font-size: inherit;
+}
+
+
+@media only screen and (min-width: 1200px){
+  .container {
+    width: 1170px;
+  }
+}
+
+@media only screen and (max-width: 749px) {
+    .container {
+        width: 100%; 
+    }
+}
+@media only screen and (max-width: 601px) {
+    .container {
+         width: 90%; 
+    }
+}
+
+.container .row,
+.container-fluid .row {
+    margin-bottom: 0;
+}
+
+.container .row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.row .col {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+
+
+/* ================= Preloader ==================== */
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    z-index: 999999;
+    text-align:center;
+}
+
+#preloader .preloader-position{
+    width:100%;
+    margin:0 auto;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#preloader .progress{
+    height: 2px;
+    margin: 35px 0;
+}
+#preloader .progress .indeterminate{
+    background:#03a9f4;
+}
+
+
+
+/* ================= TT Animate CSS ==================== */
+.tt-animate i {
+    text-align         : center;
+    overflow           : hidden;
+    -webkit-transition : all 0.5s;
+    -moz-transition    : all 0.5s;
+    transition         : all 0.5s;
+}
+
+.tt-animate i::before {
+    speak                       : none;
+    display                     : block;
+    -webkit-font-smoothing      : subpixel-antialiased !important;
+    -webkit-backface-visibility : hidden;
+    -moz-backface-visibility    : hidden;
+    -ms-backface-visibility     : hidden;
+}
+
+
+/*Left To Right*/
+.tt-animate.ltr i:hover::before {
+    -webkit-animation : LeftToRight 0.3s forwards;
+    -moz-animation    : LeftToRight 0.3s forwards;
+    animation         : LeftToRight 0.3s forwards;
+}
+
+.tt-animate.ltr i:before {
+    -webkit-animation : RightToLeft 0.3s forwards;
+    -moz-animation    : RightToLeft 0.3s forwards;
+    animation         : RightToLeft 0.3s forwards;
+}
+
+
+/*Right To Left*/
+.tt-animate.btt i:hover::before {
+    -webkit-animation : BottomToTop 0.3s forwards;
+    -moz-animation    : BottomToTop 0.3s forwards;
+    animation         : BottomToTop 0.3s forwards;
+}
+
+.tt-animate.btt i:before {
+    -webkit-animation : TopToBottom 0.3s forwards;
+    -moz-animation    : TopToBottom 0.3s forwards;
+    animation         : TopToBottom 0.3s forwards;
+}
+
+
+/*---------------------------------------------------------
+KEY FRAME 
+-----------------------------------------------------------*/
+
+/* Left to Right key frame*/
+
+@-webkit-keyframes LeftToRight {
+    49% {
+        -webkit-transform : translate(100%);
+    }
+    50% {
+        opacity           : 0;
+        -webkit-transform : translate(-100%);
+    }
+    51% {
+        opacity : 1;
+    }
+}
+
+@-moz-keyframes LeftToRight {
+    49% {
+        -moz-transform : translate(100%);
+    }
+    50% {
+        opacity        : 0;
+        -moz-transform : translate(-100%);
+    }
+    51% {
+        opacity : 1;
+    }
+}
+
+@keyframes LeftToRight {
+    49% {
+        transform : translate(100%);
+    }
+    50% {
+        opacity   : 0;
+        transform : translate(-100%);
+    }
+    51% {
+        opacity : 1;
+    }
+}
+
+/* Right to Left key frame*/
+
+@-webkit-keyframes RightToLeft {
+
+    49% {
+        -webkit-transform : translate(100%);
+    }
+    50% {
+        opacity           : 0;
+        -webkit-transform : translate(-100%);
+    }
+    51% {
+        opacity : 1;
+    }
+
+}
+
+@-moz-keyframes RightToLeft {
+    49% {
+        -webkit-transform : translate(-100%);
+    }
+    50% {
+        opacity           : 0;
+        -webkit-transform : translate(100%);
+    }
+    51% {
+        opacity : 1;
+    }
+}
+
+@keyframes RightToLeft {
+    49% {
+        -webkit-transform : translate(100%);
+    }
+    50% {
+        opacity           : 0;
+        -webkit-transform : translate(-100%);
+    }
+    51% {
+        opacity : 1;
+    }
+}
+
+/* Bottom to Top key frame*/
+
+@-webkit-keyframes BottomToTop {
+    49% {
+        -webkit-transform : translateY(-100%);
+        }
+    50% {
+        opacity           : 0;
+        -webkit-transform : translateY(100%);
+        }
+    51% {
+        opacity : 1;
+        }
+    }
+
+@-moz-keyframes BottomToTop {
+    49% {
+        -moz-transform : translateY(-100%);
+        }
+    50% {
+        opacity        : 0;
+        -moz-transform : translateY(100%);
+        }
+    51% {
+        opacity : 1;
+        }
+    }
+
+@keyframes BottomToTop {
+    49% {
+        transform : translateY(-100%);
+    }
+    50% {
+        opacity   : 0;
+        transform : translateY(100%);
+    }
+    51% {
+        opacity : 1;
+    }
+}
+
+
+/* Top to Bottom key frame*/
+@-webkit-keyframes TopToBottom {
+    49% {
+        -webkit-transform : translateY(-100%);
+        }
+    50% {
+        opacity           : 0;
+        -webkit-transform : translateY(100%);
+        }
+    51% {
+        opacity : 1;
+        }
+    }
+
+@-moz-keyframes TopToBottom {
+    49% {
+        -moz-transform : translateY(-100%);
+        }
+    50% {
+        opacity        : 0;
+        -moz-transform : translateY(100%);
+        }
+    51% {
+        opacity : 1;
+        }
+    }
+
+@keyframes TopToBottom {
+    49% {
+        transform : translateY(-100%);
+    }
+    50% {
+        opacity   : 0;
+        transform : translateY(100%);
+    }
+    51% {
+        opacity : 1;
+    }
+}
