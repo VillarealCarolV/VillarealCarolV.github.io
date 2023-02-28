@@ -1,0 +1,132 @@
+
+
+.bg-body-primary{
+    background-color: #413d3d;
+  
+}
+.nav-item{
+    margin: 0px 20px;
+    /* padding-left: 30px; */
+    position: relative;
+    /* font-family: 'Kanit', sans-serif; */
+    font-weight: 500;
+    font-family: 'Zeyada', cursive;
+
+}
+.nav-item::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    background-color: aliceblue;
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    transition: 0.3s;
+}
+.nav-item:hover::after{
+ width: 100%;   
+    
+}
+.container{
+    font-size: 20px;
+}
+.navbar-brand{
+    font-size: 2rem;
+    font-family: 'Zeyada', cursive;
+    font-weight: 600;
+}
+.pic-size{
+    font-size: 22px;
+                
+}
+@media(max-width: 991px){
+    .pic-size{
+        display: none;
+    }
+    
+}
+
+
+.head-text{
+    padding-left: 10px;
+    font-family: 'Zeyada', cursive;
+    font-weight: 700;
+    color: white;
+    font-size: 22px;
+    
+}
+
+@media(max-width: 991px){
+
+    .fa-solid.fa-cart-shopping{
+        display: none;
+    }
+    .fa-solid.fa-user{
+        display: none;
+    }
+}
+
+
+.modal-line:hover{
+    background-color: #505050;
+    transition: .4s;
+    border-radius: 4px;
+}
+.modal-link{
+    color: white;
+    padding-left: 30px;
+    text-align: justify;
+    font-size: 26px;
+    text-decoration: overline;
+}
+
+                                /* main section */
+ .main{
+    background-image: url(../asset/images/jack-drkk_Tqbqq4-unsplash.jpg);
+    background-size: cover;
+    min-height:100vh;
+    display: flex;
+    background-position: center;
+    
+ 
+ }  
+ .main h1{
+    font-size: 4rem;
+    font-weight: 800;
+    text-shadow: 2px 2px 5px white;
+}  
+.btn-lg:hover{
+  box-shadow: #ffff;
+  transition: .3s;
+}
+
+   
+.modal-header{
+    background-color: #181818;
+}
+.modal-title{
+    padding-left: 105px;
+    font-size: 30px;
+    font-weight: 300;
+    color: white;
+}
+.email{
+    margin-bottom: 20px;
+}
+
+.password{
+    margin-bottom: 20px;
+}
+
+.modal-body{
+    background-color: #181818;
+    height: 37vh;
+}
+.modal-footer{
+    justify-content: space-between;
+    color: gray;
+    background-color: #181818;
+}
+.nav-tabs{
+    font-size: 29px;
+}

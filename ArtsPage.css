@@ -1,0 +1,49 @@
+h1.text-center{
+    font-weight: 800;
+}
+header{
+    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.navbar-collapse{
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+}
+.nav-tabs, .nav-link{
+    font-size: 29px;
+    color: black;
+    border: none !important;
+
+}
+.navbar-brand{
+    font-size: 2rem;
+    font-family: 'Zeyada', cursive;
+    font-weight: 600;
+}
+                /* PORTRAIT */
+.bg-pencil{
+    background-color: #454548;
+}
+.title{
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+}
+
+@media(max-width: 680px){
+    .me-auto{
+        display: block;
+    }
+}
+@media(max-width: 991px){
+    .details-1{
+        width: 60%!important;
+        margin: auto!important; 
+        margin-top: 50px
+        
+    }
+}
+.form-select{
+    margin: 5px;
+    font-family: unset;
+    font-weight: 500;
+}
