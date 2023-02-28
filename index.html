@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DrawCom</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -63,18 +63,40 @@
               <li class="nav-item dropdown">
                 <a class="nav-link text-white" href="#Contact"> Contact </a>
               </li>
-              <li class="nav-item dropdown ">
+              <li class="nav-item dropdown  pb-2 border-bottom">
                 <a class="nav-link text-white" href="ArtsPage.html">Gallery</a>
               </li>
-             
-              <li class="nav-item dropdown d-lg-none">
-                <a class="nav-link text-white" href="#">Admin</a>
-              </li>
             </ul>
+              
+
+               
+            
 
             <form class="d-flex m-auto" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-light" type="submit">Search</button>
+              
+              
+            <!-- Button trigger modal -->
+<button type="button" class="btn btn-outline-light d-search-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+     
+      <div id="modal-body">
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-primary mt-2">
+          <span class="spinner-border spinner-border-sm"></span>
+        </button>
+      </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
             </form>
 
 
@@ -87,12 +109,12 @@
               </button>
              -->
 
-             <button type="button" class="btn btn-outline-light me-3" data-bs-toggle="modal" data-bs-target="#myModal">
+             <button type="button" class="btn btn-outline-light me-3 d-log" data-bs-toggle="modal" data-bs-target="#myModal">
             <i class="fa-regular fa-user me-2 d-none"></i><span>Log In</span> 
             </button>
              <!-- The Modal -->
 <div class="modal" id="myModal">
-  <div class="modal-dialog modal-dialog-centered">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
 
       <!-- Modal Header -->
@@ -131,12 +153,12 @@
 </div>
        <!------------------=============SIGN UP================--------------->
           
-            <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#SignUp">
+            <button class="btn btn-outline-light d-log" data-bs-toggle="modal" data-bs-target="#SignUp">
               <span class="btn-outline-light">Sign Up</span></button>
 
                <!-- The Modal -->
 <div class="modal" id="SignUp">
-  <div class="modal-dialog modal-dialog-centered">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content" style="height: 90vh;">
 
       <!-- Modal Header -->

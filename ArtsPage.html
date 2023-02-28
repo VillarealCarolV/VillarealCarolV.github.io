@@ -26,13 +26,13 @@
     ><i class="fa-solid fa-pencil"></i><span>Work</span><span>Of</span
     ><span>aRT</span></a
   >
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       
-      <ul class="nav nav-tabs me-auto mb-2 mb-lg-0 mx-auto">
+      <ul class="nav nav-tabs me-auto mb-2 mb-lg-0 mx-auto drawing-block">
         <li class="nav-item">
           <a data-bs-toggle="tab"  class="nav-link"  href="#portrait">Portrait</a>
         </li>
@@ -42,15 +42,18 @@
         <li class="nav-item">
           <a data-bs-toggle="tab" class="nav-link" href="#cartoonproject">Drawing Cartoon</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item border-bottom">
           <a data-bs-toggle="tab" class="nav-link" href="#archproject">Architectural Drawing</a>
         </li>
 
-        <li class="nav-item">
+        <li class="nav-item mt-2">
           <button type="button" class="btn btn-outline-none" data-bs-toggle="modal" data-bs-target="#myModal">
-           <img src="./asset/images/cart.png" class="img-fluid rounded-pill" style="width: 44px;"
+           <img src="./asset/images/cart.png" class="img-fluid rounded-pill cart-none" style="width: 44px;"
            alt="">
+            <h1 class="d-lg-none logo">Shop</h1>
           </button>
+
+         
             <!-- The Modal -->
 <div class="modal fade" id="myModal">
   <div class="modal-dialog">
@@ -126,7 +129,9 @@
       
 
         <a class="navbar-brand" href="#">
-          <button type="button" class="btn btn-outline-none" data-bs-toggle="modal" data-bs-target="#loadingbtn"><img src="./asset/images/user.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill"> 
+          <button type="button" class="btn btn-outline-none" data-bs-toggle="modal" data-bs-target="#loadingbtn">
+            <img src="./asset/images/user.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill user-none"> 
+      <h1 class="d-lg-none logo">Account</h1>
           </button> 
           <!-- The Modal -->
 <div class="modal" id="loadingbtn">

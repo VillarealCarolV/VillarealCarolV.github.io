@@ -10,7 +10,7 @@ header{
     font-weight: bold;
 }
 .nav-tabs, .nav-link{
-    font-size: 29px;
+    font-size: 26px;
     color: black;
     border: none !important;
 
@@ -40,6 +40,18 @@ header{
         margin: auto!important; 
         margin-top: 50px
         
+    }
+    .drawing-block{
+        display:block;
+    }
+    .cart-none{
+        display: none;
+    }
+    .user-none{
+        display: none;
+    }
+    .logo{
+        font-size: 30px;
     }
 }
 .form-select{

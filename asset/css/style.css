@@ -13,9 +13,6 @@
     font-family: 'Zeyada', cursive;
 
 }
-.pb-2{
-padding-bottom: .05rem!important;
-}
 .nav-item::after{
     content: '';
     height: 2px;
@@ -26,9 +23,6 @@ padding-bottom: .05rem!important;
     bottom: 2px;
     transition: 0.3s;
 }
-
-
-
 .nav-item:hover::after{
  width: 100%;   
     
@@ -48,13 +42,6 @@ padding-bottom: .05rem!important;
 @media(max-width: 991px){
     .pic-size{
         display: none;
-    }
-    .d-log{
-        display: block;
-        border: none;
-    }
-    .d-search-none{
-        display:none;
     }
     
 }
