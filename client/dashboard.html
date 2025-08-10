@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Dashboard - Canteen Ledger</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-color: #0d6efd;
+            --secondary-color: #6c757d;
+        }
+        body {
+            background-color: #f8f9fa;
+        }
+        .sidebar {
+            min-height: 100vh;
+            background-color: #343a40;
+            color: white;
+            position: fixed;
+            width: 250px;
+        }
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+        .nav-link {
+            color: rgba(255, 255, 255, 0.8);
+            margin: 5px 0;
+            border-radius: 5px;
+            padding: 10px 15px;
+        }
+        .nav-link:hover, .nav-link.active {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+        .nav-link i {
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card-header {
+            background-color: white;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            font-weight: 600;
+        }
+        .stat-card {
+            text-align: center;
+            padding: 20px;
+        }
+        .stat-card i {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        .stat-card h3 {
+            font-weight: 700;
+            margin: 10px 0;
+        }
+        .stat-card p {
+            color: var(--secondary-color);
+            margin: 0;
+        }
+        .welcome-banner {
+            background: linear-gradient(135deg, #0d6efd, #0dcaf0);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .recent-orders th {
+            font-weight: 600;
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .status-badge {
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        .status-pending {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+        .status-completed {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .status-processing {
+            background-color: #cce5ff;
+            color: #004085;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-2 px-0 sidebar">
+                <div class="text-center py-4">
+                    <h4>Client Portal</h4>
+                </div>
+                <ul class="nav flex-column px-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            <i class="bi bi-speedometer2"></i> Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-cart"></i> Place Order
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-list-check"></i> My Orders
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-cash-stack"></i> My Balance
+                        </a>
+                    </li>
+                    <li class="nav-item mt-5">
+                        <a class="nav-link text-danger" href="#" onclick="logout()">
+                            <i class="bi bi-box-arrow-right"></i> Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-10 main-content">
+                <div class="welcome-banner">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h2>Welcome back, <span id="clientName">Client</span>!</h2>
+                            <p class="mb-0">Here's what's happening with your account today.</p>
+                        </div>
+                        <div class="text-end">
+                            <p class="mb-1">Current Balance</p>
+                            <h2 class="mb-0">₱<span id="currentBalance">2,450.00</span></h2>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body stat-card">
+                                <i class="bi bi-cart-check"></i>
+                                <h3 id="totalOrders">12</h3>
+                                <p>Total Orders</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body stat-card">
+                                <i class="bi bi-clock-history"></i>
+                                <h3 id="pendingOrders">2</h3>
+                                <p>Pending Orders</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body stat-card">
+                                <i class="bi bi-currency-dollar"></i>
+                                <h3>₱<span id="totalSpent">5,230</span></h3>
+                                <p>Total Spent</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Orders -->
+                <div class="card mt-4">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Recent Orders</h5>
+                        <a href="#" class="btn btn-sm btn-outline-primary">View All</a>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover recent-orders">
+                                <thead>
+                                    <tr>
+                                        <th>Order ID</th>
+                                        <th>Date</th>
+                                        <th>Items</th>
+                                        <th>Total</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="recentOrders">
+                                    <!-- Will be populated by JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Quick Actions</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-primary">
+                                        <i class="bi bi-plus-circle"></i> Place New Order
+                                    </button>
+                                    <button class="btn btn-outline-secondary">
+                                        <i class="bi bi-cash-stack"></i> Make a Payment
+                                    </button>
+                                    <button class="btn btn-outline-secondary">
+                                        <i class="bi bi-download"></i> Download Statement
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Account Summary</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Credit Limit
+                                        <span class="fw-bold">₱5,000.00</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Available Credit
+                                        <span class="fw-bold">₱2,550.00</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Payment Due Date
+                                        <span class="fw-bold">Aug 25, 2023</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Minimum Payment Due
+                                        <span class="fw-bold">₱500.00</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Check if user is logged in
+        document.addEventListener('DOMContentLoaded', function() {
+            if (!localStorage.getItem('isClientLoggedIn')) {
+                window.location.href = 'login.html';
+            }
+            
+            // Set client name
+            const clientName = localStorage.getItem('clientUsername') || 'Client';
+            document.getElementById('clientName').textContent = clientName;
+            
+            // Load sample data
+            loadDashboardData();
+        });
+
+        function loadDashboardData() {
+            // Sample data (in a real app, this would come from an API)
+            const recentOrders = [
+                { id: '#ORD-1001', date: '2023-08-10', items: 3, total: '1,250.00', status: 'Completed' },
+                { id: '#ORD-1002', date: '2023-08-09', items: 2, total: '850.00', status: 'Processing' },
+                { id: '#ORD-1003', date: '2023-08-08', items: 5, total: '2,150.00', status: 'Completed' },
+                { id: '#ORD-1004', date: '2023-08-07', items: 1, total: '350.00', status: 'Pending' },
+                { id: '#ORD-1005', date: '2023-08-05', items: 4, total: '1,630.00', status: 'Completed' }
+            ];
+
+            // Populate recent orders
+            const tbody = document.getElementById('recentOrders');
+            recentOrders.forEach(order => {
+                const row = document.createElement('tr');
+                const statusClass = order.status.toLowerCase() === 'completed' ? 'status-completed' : 
+                                 order.status.toLowerCase() === 'processing' ? 'status-processing' : 'status-pending';
+                
+                row.innerHTML = `
+                    <td>${order.id}</td>
+                    <td>${order.date}</td>
+                    <td>${order.items} items</td>
+                    <td>₱${order.total}</td>
+                    <td><span class="status-badge ${statusClass}">${order.status}</span></td>
+                    <td><a href="#" class="btn btn-sm btn-outline-primary">View</a></td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        function logout() {
+            // Clear login state
+            localStorage.removeItem('isClientLoggedIn');
+            localStorage.removeItem('clientUsername');
+            // Redirect to login page
+            window.location.href = 'login.html';
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
