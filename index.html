@@ -2,348 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DrawCom</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <!-- Bootstrap 5 -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-      crossorigin="anonymous"
-    />
-
-    <link rel="stylesheet" href="css/style.css" />
+    <title>Canteen Ledger - Static Version</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .card { margin: 20px 0; }
+        .btn { margin: 5px; }
+    </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-primary">
-             <div class="container">
-          <a class="navbar-brand text-white" href="#"
-            ><i class="fa-solid fa-pencil"></i><span>Work</span><span>Of</span
-            ><span>aRT</span></a
-          >
-          <button
-            class="navbar-toggler btn-1"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav  mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a
-                  class="nav-link active text-white" 
-                  aria-current="page"
-                  href="#"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="#About">About</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link text-white" href="#Contact"> Contact </a>
-              </li>
-              <li class="nav-item dropdown  pb-2 border-bottom">
-                <a class="nav-link text-white" href="ArtsPage.html">Gallery</a>
-              </li>
-            </ul>
-              
-
-               
-            
-
-            <form class="d-flex m-auto" role="search">
-              
-              
-            <!-- Button trigger modal -->
-<button type="button" class="btn btn-outline-light d-search-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  <i class="fa-solid fa-magnifying-glass"></i>
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-     
-      <div id="modal-body">
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-primary mt-2">
-          <span class="spinner-border spinner-border-sm"></span>
-        </button>
-      </form>
-      </div>
-      
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h2>Canteen Ledger</h2>
+                    </div>
+                    <div class="card-body text-center">
+                        <p class="lead">Welcome to the static version of Canteen Ledger</p>
+                        <div class="d-grid gap-2">
+                            <a href="admin/login.html" class="btn btn-primary">Admin Login</a>
+                            <a href="client/login.html" class="btn btn-success">Client Login</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="alert alert-info mt-3">
+                    <strong>Note:</strong> This is a static version with limited functionality.
+                    For full features, use the PHP version with a proper server setup.
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-            </form>
-
-
-            
-              <!-- <button class="btn btn-outline-light me-3">
-                <div class="modal-dialog modal-dialog-centered">
-                <i class="fa-regular fa-user "></i>
-                <span class="btn-outline-light">Log in</span>
-              </div>
-              </button>
-             -->
-
-             <button type="button" class="btn btn-outline-light me-3 d-log" data-bs-toggle="modal" data-bs-target="#myModal">
-            <i class="fa-regular fa-user me-2 d-none"></i><span>Log In</span> 
-            </button>
-             <!-- The Modal -->
-<div class="modal" id="myModal">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-    <div class="modal-content">
-
-      <!-- Modal Header -->
-      <div class="modal-header">
-        <h4 class="modal-title mx-auto">Log In</h4>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-
-      <!-- Modal body -->
-      <div class="modal-body">
-      <div class="myform">
-        <form action="#">
-          <div class="email"><label for="email" style="color: white;
-          ">Email Address</label>
-          <input type="email" class="form-control">
-        </div>
-        <div class="password"><label for="password" style="color: white
-        ;">Password</label>
-        <input type="password" class="form-control">
-      </div>
-      <button type="button" class="btn btn-dark mt-3" style="font-size: 20px;">Log In</button>
-        </form>
-      </div>
-      </div>
-
-      <!-- Modal footer -->
-      <div class="modal-footer">
-        <div class="signup ">
-          <p><a href="#">Create an account</a></p>
-        </div>
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-      </div>
-
-    </div>
-  </div>
-</div>
-       <!------------------=============SIGN UP================--------------->
-          
-            <button class="btn btn-outline-light d-log" data-bs-toggle="modal" data-bs-target="#SignUp">
-              <span class="btn-outline-light">Sign Up</span></button>
-
-               <!-- The Modal -->
-<div class="modal" id="SignUp">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-    <div class="modal-content" style="height: 90vh;">
-
-      <!-- Modal Header -->
-      <div class="modal-header bg-white">
-        <h4 class="modal-title mx-auto text-dark">Sign Up</h4>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-
-      <!-- Modal body -->
-      <div class="modal-body bg-white">
-      <div class="myform">
-        <form action="#">
-          <div class="name mt-3"><label for="name" style="color: rgb(0, 0, 0);
-          ">Name</label>
-          <input type="text" class="form-control">
-        </div>
-        <div class="lastname mt-3"><label for="LastName" style="color: rgb(0, 0, 0)
-        ;">Last Name</label>
-        <input type="text" class="form-control">
-      </div>
-      <div class="pnumber mt-3"><label for="text">
-        Phone Number
-      </label><input type="number" class="form-control"></div>
-      <div class="email mt-3"><label for="email" style="color: rgb(0, 0, 0);
-        ">Email Address</label>
-        <input type="email" class="form-control">
-      </div>
-      <div class="password"><label for="password" style="color: rgb(0, 0, 0)
-      ;">Password</label>
-      <input type="password" class="form-control">
-    </div>
-      <button type="button" class="btn btn-dark mt-2" style="font-size: 20px;">Sign Up</button>
-        </form>
-      </div>
-      </div>
-
-      <!-- Modal footer -->
-      <div class="modal-footer bg-white">
-        <div class="signup ">
-          <p><a href="#">Create an account</a></p>
-        </div>
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-             </nav>
- </header>
-                  <!--================================END OF HEADER===============================-->
-
-                  <!--=====================================main section========================== -->
-    <section class="main py-5">
-      <div class="container py-5">
-        <div class="row py-5"></div>
-        <div class="col-lg-7"></div>
-        <h1>
-          Drawing Commissions <br />
-          Just For You
-        </h1>
-        <button type="button" class="btn btn-secondary btn-lg mt-3">
-         <a href="#Contact" class="text-white
-          text-decoration-none">Contact Us</a> 
-        </button>
-      </div>
-    </section>
-     
-    
-    <!--=====================Section 2===========================-->
-    <section class="About bg-dark" id="About">
-      <div class="container py-2">
-      <!-- <h1 class="text-center" style="font-weight: 800;font-size: 4rem;">
-          <span style="color: white;padding-right: 17px;" >About</span><span style="color: white;">Us</span>
-        </h1> -->
-      
-        <div class="row py-5">
-          <div class="content col-lg-5">
-            <h4 style="color: antiquewhite;">We Draw Different Types Of Drawing</h4>
-            <p style="color: antiquewhite;font-weight: 500;">Open For Commission</p>
-    
-           <p class="py-2 text-white"> We're able to make Doodle, Photorealism or Portrait,Cartoon
-            Drawing or Animation Architectural Drawing, and It depends on
-            what sizes of paper or board you want. We can also
-            make Digital artwork. <br><a href="ArtsPage.html">Click the search button above to see more details</a> .</p>
-            <p class="text-white">This photo beside is the example work of an artist that used in 
-              different materials such as graphite pencils, and charcoals on Vellum board A4 size.
-            </p>
-
-            <p class="text-white">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo natus alias repellat facere amet minima repudiandae aut animi voluptatem nisi. Eveniet dolores odit, fuga earum nulla eum est adipisci aliquam.</p>
-           
-            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi ab ea, unde sunt pariatur facilis quam harum accusantium ipsum! Commodi in beatae dolor ea sed libero deleniti nemo itaque vitae.</p>
-         
-         
-          </div>
-           
-           <div class="col-lg-7">
-
-            <div id="demo" class="carousel slide" data-bs-ride="carousel">
-
-              <!-- Indicators/dots -->
-              <div class="carousel-indicators">
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
-
-                
-              </div>
-
-              <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="./asset/images/Art-1.jpg" alt="" class="d-block" style="width:100%">
-              </div>
-              <div class="carousel-item">
-                <img src="./asset/images/art-2.jpg" alt="" class="d-block" style="width:100%">
-              </div>
-              <div class="carousel-item">
-                <img src="./asset/images/art-3.jpg" alt="" class="d-block" style="width:100%">
-              </div>
-
-              <div class="carousel-item">
-                <img src="./asset/images/art-4.jpg" alt="" class="d-block" style="width:100%">
-              </div>
-
-              <div class="carousel-item">
-                <img src="./asset/images/art-5.jpg" alt="" class="d-block" style="width:100%">
-              </div>
-
-             </div>
-
-             <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-              <span class="carousel-control-next-icon"></span>
-            </button>
-
-           </div>
-        </div>
-       </div>
-    </section>
-
-                          <!-----===================DETAILS============================---->
-      <footer>
-        <div class="container" id="Contact">
-          <div class="row">
-            <div class="col-md-3 col-xl-3 mx-auto mt-3">
-              <h5 class="mb-4 font-weight-bold text-info">About Us</h5>
-              <hr class="mb-4">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero voluptatibus voluptas rem eaque laborum eveniet adipisci inventore corporis earum accusantium commodi quia aspernatur atque, quis ullam sit quisquam sapiente ducimus?</p>
-          </div>
-          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-            <h5 class="mb-4 font-weight-bold text-info">Contact Us</h5>
-              <hr class="mb-4">
-              <p>
-                <li class="fas fa-home me-3"></li><a href="#">Manila, Philippines</a>
-              </p>
-              <p>
-                <li class="fas fa-envelope me-3"></li><a href="#">me@yahoo.com</a> 
-              </p>
-              <p>
-                <li class="fa-brands fa-twitter me-3"></li><a href="#">@mytwitter</a>
-              </p>
-              <p>
-                <li class="fa-brands fa-facebook me-3"></li><a href="#">Carol Villareal</a>
-              </p>
-              <p>
-                <li class="fas fa-phone me-3"></li><a href="#">217-202-6169</a>
-              </p>
-          </div>
-          </div>
-        </div>
-      </footer>                    
-
-
-    
-    
-    <!-- Bootstrap 5 -->
-     <script
-     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-     crossorigin="anonymous"
-   ></script>
-   <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
